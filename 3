@@ -1,0 +1,29 @@
+#제곱근의 근사값 구하기
+def square_root(a, b):
+    if b == a**2:
+        return a
+    else:
+        a = (a+(b/a))/2
+        return square_root(a, b)
+
+print(square_root(2, 14))
+
+#isnumeric()함수를 구현하기
+
+
+def isnumeric():
+    num = input("문자열을 입력하세요")
+    return num
+num = isnumeric()
+
+def second(num):
+    try:
+        if float(num):
+           return True
+    
+    except ValueError : 
+        return False
+
+print(second(num))
+
+#제곱근의 근사값을 구하는 재귀함수를 만들되, "한없이 가깝다면"을 "전의 값과 변함이 없다면"으로 조건을 바꿔라
